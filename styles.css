@@ -49,81 +49,7 @@ body {
  
 }
 
-header {
-    display: flex;
-  justify-content: space-between;
-  align-items: center;
-height: 100px;
-border-bottom: 2px solid #FF9FFF;
 
-background-color: #151621;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='100' height='100' patternUnits='userSpaceOnUse' patternTransform='scale(0.04)'%3E%3Cpath id='a' data-color='fill' fill='%23020519' stroke='%23020519' stroke-width='2' d='M50 100L0 50V0l50 50 50-50h0v50l-50 50z'%3E%3C/path%3E%3Cuse xlink:href='%23a' y='-100'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='100'%3E%3C/use%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-margin-bottom: 13px;
-
-
-
-
-}
-img {
-    
-    display: inline;
-    width: 50px;
-    height: 50px;
-    margin-left: 35px;
-    float: left;
-    filter: hue-rotate(240deg);
-}
-
-.titulo {
-    
-    display:inline;
-    justify-content: center;
-    margin: 0px 25px 0px 25px;
-    color: #FF9AFF;
-    font-family: 'Rampart One', cursive;;
-    font-size: 3.5rem;
-}
-
-nav {
-    
-    display: inline;
-    float: right;
-    margin-right: 15px;
-    
-
-}
-
-.nav-link {
-    display: inline;
-    margin: 0px 15px 0px 7.5px;
-    float: right;
-    
-
-
-}
-
-.nav-link > a {
-    text-decoration: none;
-    color: blanchedalmond;
-    float: right;
-    font-family: 'Ubuntu';
-    font-size: 1.2rem;
-
-}
-
-.nav-link > a:hover {
-    color: #FF9AFF;
-    scale: 1.2;
-}
-
-.logoMobile {
-   
-    display: none;
-
-}
 
 .custom {
     
@@ -375,33 +301,41 @@ width: 95%;
 }
 
 .contenedorWinner {
-    display: flex;
+    display: block;
     justify-content: center;
-    margin: 10px;
-    padding: 5px;
-}
-.cajaGanador {
+    margin: 20px;
     padding: 10px;
-    display: inline;
-    width: 75%;
-    height: 200px;
     border-radius: 11px;
 background: linear-gradient(225deg, #dadada, #ffffff);
 box-shadow:  -19px 19px 38px #858585,
              19px -19px 38px #ffffff;
+             border: 0.5px solid #621d75;
+             height: 200px;
+             width: 70%;
+             align-self: center;
+}
+.cajaGanador {
+    padding: 10px;
+    display: block;
+    width: 75%;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    
     margin: 10px;
-    border: 0.5px solid #621d75;
+    
     text-align: center;
     font-size: 1.4rem;
 }
 
 .cajaNombreGanador {
-    display: inline;
+    display: block;
 }
 
 .creado {
     display: inline;
     text-transform: uppercase;
+    justify-self: center;
 }
 
 .subtitulo {
@@ -431,30 +365,35 @@ footer {
         flex-direction: column;
         justify-content: center;
     }
-header {
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow-x: visible;
-}
+
+    header {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
     nav {
         display: flex;
         flex-direction: row;
         
     }
-.logo {
-    scale: 0.7;
-}
+
+    .logo {
+        scale: 0.7;
+    }
+
     .logoMobile {
         scale: 0.7;
         flex-wrap: nowrap;
     }
- .titulo {
-    text-align: center;
-    font-size: 1.4rem;
-    margin: 0;
- }
+
+    .titulo {
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
    .sorteador {
-    
         justify-content: space-between;
         flex-flow: column;
         height: auto;
@@ -464,10 +403,7 @@ header {
     .custom  {
         display: flex;
         align-items: center;
-        
-       
         flex-direction: column;
-        
         width: 90%;
     }
 
@@ -491,18 +427,16 @@ header {
     }
    
    img {
-    margin: 5px;
+        margin: 5px;
    }
 
     .logoMobile {
         display: inline;
     }
-    .ganador {
-       
-        justify-content: space-between;
 
+    .ganador {
+        justify-content: space-between;
         flex-flow: column;
-        
     }
 
 
