@@ -5,6 +5,7 @@ let conteo = [];
  const boton = document.querySelector("[data-btn-ingresar]");
  const btnSortear = document.querySelector("[data-sortear]");
  
+ // crea leyenda para el ganador con el nombre del organizador
  const createGanador = (evento) => {
     evento.preventDefault();
     const inputDatos = document.querySelector("[data-organizador");
@@ -23,7 +24,7 @@ anuncio.appendChild(ganador);
 
 
  }
-
+// crea participante en la lista
 const createLi = (evento) => {
     
     evento.preventDefault();
@@ -57,6 +58,7 @@ const createLi = (evento) => {
     }*/
 };
 
+//crea nombre del ganador
 const createNombre = (evento) => {
 evento.preventDefault();
 const rand = Math.floor(Math.random()*conteo.length);
@@ -93,6 +95,8 @@ const contador = `<p class="parrafoCantidad">Cantidad de participantes: <span id
 </span></p>`;
 document.getElementById("contador").innerHTML = contador;
 
+
+//eventos
  btn.addEventListener("click", createLi);
  boton.addEventListener("click", createGanador);
  btnSortear.addEventListener("click", createNombre);
