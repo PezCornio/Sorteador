@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="funciones.js"></script>
+    <title>S O R T E A D O R</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><img class="logo-desktop" src="img/loteria.png" alt=""></h1>
+        <h1 class="titulo">SORTEADOR del PEZ</h1>
+        <h1 class="logoMobile"><img  class="logo-mobile" src="img/loteria.png" alt=""></h1>
+        <nav>
+            <ul>
+                <li class="nav-link"><a href="">Info</a></li>
+                <li class="nav-link"><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    
+
+    <section class="sorteador">
+
+        <div class="custom">
+            <h1 class="tituloCustom">Información para tu sorteo</h1>
+            <h6 class="subtitulo">Por favor, ingresá tu nombre o marca para iniciar el sorteo.</h6>
+
+            
+            <form action="" id="organizador" ></form>
+            <label for="organizador" class="orgaLabel">Organizador: <span class="asterisco">*</span></label>
+            <input type="text" name="organizador" id="nombreOrganizador" placeholder="Nombre, Marca, etc..." class="orgaInput" data-organizador>
+    
+            <form action="" id="premio"></form>
+            <label for="premio" class="orgaLabel">Premio:</label>
+            <input type="text" name="premio" id="Premio" class="orgaInput">
+    
+            <form action="" id=""></form>
+            <label for="bases" class="orgaLabel">Bases y condiciones:</label>
+            <input type="text-area" name="bases" id="bases" class="orgaInput">
+
+            <button type="submit" id="aceptarDatos" data-btn-ingresar>Aceptar</button>
+    
+    
+        </div>
+
+        <div class="caja-sorteo">
+        
+            <form action="" id="sorteo">
+                <label for="ingreso" class="agregarLabel">Ingrese un participante:</label>
+                <div class="inputParticipante">
+                <input type="text" name="ingreso" id="ingreso"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@_-.])(?!.*[ ]).{2}$" data-input required>
+            </form>
+            <button type="submit" id="agregar" data-btn-agregar>Agregar<i class="fa-sharp fa-regular fa-circle-plus"></i></button>
+        </div>
+
+        <div id="contador" class="cantidad" data-conteo>
+            <p class="parrafoCantidad">Cantidad de participantes: <span id="total"></span></p>
+        </div>
+
+            <div class="cajaContador" data-conteo>
+                
+            </div>
+
+            <div class="caja-lista">
+                
+                <div class="box-lista">
+                    <ul class="listado" id="listado" data-lista>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <button type="submit" id="sortear" class="sortear" data-sortear>Sortear</button>
+        </div>
+
+
+        
+
+    </section>
+
+    <section class="ganador">
+        <div class="contenedorWinner">
+        <div class="cajaGanador" data-caja-ganador>
+            
+        </div>
+        
+        <div class="cajaNombreGanador" data-nombre></div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+        
+    <script src="scripts.js"></script>
+    
+</body>
+</html>
