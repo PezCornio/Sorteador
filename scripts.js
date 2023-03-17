@@ -15,7 +15,7 @@ let conteo = [];
     const ganador = document.createElement("div");
     ganador.classList.add("creado");
     const contenidoDatos = `<span>
-    <h1>El ganador/a del sorteo de<span class"organizador"> ${valueDatos} </span>es...</h1>
+    <h1 class="animate__animated animate__backInLeft" >El ganador/a del sorteo de<span class="organizador"> ${valueDatos} </span>es...</h1>
     </span>
 `;
 ganador.innerHTML = contenidoDatos;
@@ -66,15 +66,17 @@ const nombre = conteo[rand];
 const cajaGanador = document.querySelector("[data-nombre]");
 const nombreGanador = document.createElement("div");
 nombreGanador.classList.add("nombreGanador");
-const contenidoGanador = `<span><h1 class="winner">${nombre}</h1></span>`;
+const contenidoGanador = `<span><h1 class="winner animate__animated animate__zoomIn">${nombre}</h1></span>`;
 nombreGanador.innerHTML = contenidoGanador;
-cajaGanador.appendChild(nombreGanador)
+cajaGanador.appendChild(nombreGanador);
 
 
 console.log(conteo.length);
 
 
 }
+
+
 
  /*
 const crearContador = function () {
@@ -99,6 +101,6 @@ document.getElementById("contador").innerHTML = contador;
 //eventos
  btn.addEventListener("click", createLi);
  boton.addEventListener("click", createGanador);
- btnSortear.addEventListener("click", createNombre);
+ btnSortear.addEventListener("click", (createNombre));
 
  console.log(contador);

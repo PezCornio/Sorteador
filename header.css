@@ -72,3 +72,36 @@ nav {
     display: none;
 
 }
+
+@media only screen and (max-width: 380px) {
+
+    
+
+    header {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .logo {
+        scale: 0.7;
+    }
+
+    .logoMobile {
+        display: inline;
+        scale: 0.7;
+        flex-wrap: nowrap;
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 0;
+    }
+}
