@@ -8,16 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <script src="funciones.js"></script>
     <title>S O R T E A D O R</title>
 </head>
 <body>
     <header>
-        <h1 class="logo"><img src="img/loteria.png" alt=""></h1>
+        <h1 class="logo"><img class="logo-desktop" src="img/loteria.png" alt=""></h1>
         <h1 class="titulo">SORTEADOR del PEZ</h1>
-        <h1 class="logoMobile"><img  src="img/loteria.png" alt=""></h1>
+        <h1 class="logoMobile"><img  class="logo-mobile" src="img/loteria.png" alt=""></h1>
         <nav>
             <ul>
                 <li class="nav-link"><a href="">Info</a></li>
@@ -58,7 +62,7 @@
             <form action="" id="sorteo">
                 <label for="ingreso" class="agregarLabel">Ingrese un participante:</label>
                 <div class="inputParticipante">
-                <input type="text" name="ingreso" id="ingreso"  data-input required>
+                <input type="text" name="ingreso" id="ingreso"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@_-.])(?!.*[ ]).{2}$" data-input required>
             </form>
             <button type="submit" id="agregar" data-btn-agregar>Agregar<i class="fa-sharp fa-regular fa-circle-plus"></i></button>
         </div>
@@ -91,10 +95,10 @@
     <section class="ganador">
         <div class="contenedorWinner">
         <div class="cajaGanador" data-caja-ganador>
-            <div class="cajaNombreGanador" data-nombre></div>
+            
         </div>
         
-            
+        <div class="cajaNombreGanador" data-nombre></div>
         </div>
     </section>
 

@@ -5,6 +5,7 @@ let conteo = [];
  const boton = document.querySelector("[data-btn-ingresar]");
  const btnSortear = document.querySelector("[data-sortear]");
  
+ // crea leyenda para el ganador con el nombre del organizador
  const createGanador = (evento) => {
     evento.preventDefault();
     const inputDatos = document.querySelector("[data-organizador");
@@ -14,7 +15,7 @@ let conteo = [];
     const ganador = document.createElement("div");
     ganador.classList.add("creado");
     const contenidoDatos = `<span>
-    <h1>El ganador/a del sorteo de<span class"organizador"> ${valueDatos} </span>es...</h1>
+    <h1 class="animate__animated animate__backInLeft" >El ganador/a del sorteo de<span class="organizador"> ${valueDatos} </span>es...</h1>
     </span>
 `;
 ganador.innerHTML = contenidoDatos;
@@ -23,7 +24,7 @@ anuncio.appendChild(ganador);
 
 
  }
-
+// crea participante en la lista
 const createLi = (evento) => {
     
     evento.preventDefault();
@@ -57,6 +58,7 @@ const createLi = (evento) => {
     }*/
 };
 
+//crea nombre del ganador
 const createNombre = (evento) => {
 evento.preventDefault();
 const rand = Math.floor(Math.random()*conteo.length);
@@ -64,15 +66,17 @@ const nombre = conteo[rand];
 const cajaGanador = document.querySelector("[data-nombre]");
 const nombreGanador = document.createElement("div");
 nombreGanador.classList.add("nombreGanador");
-const contenidoGanador = `<span><h1 class="winner">${nombre}</h1></span>`;
+const contenidoGanador = `<span><h1 class="winner animate__animated animate__zoomIn">${nombre}</h1></span>`;
 nombreGanador.innerHTML = contenidoGanador;
-cajaGanador.appendChild(nombreGanador)
+cajaGanador.appendChild(nombreGanador);
 
 
 console.log(conteo.length);
 
 
 }
+
+
 
  /*
 const crearContador = function () {
@@ -93,8 +97,10 @@ const contador = `<p class="parrafoCantidad">Cantidad de participantes: <span id
 </span></p>`;
 document.getElementById("contador").innerHTML = contador;
 
+
+//eventos
  btn.addEventListener("click", createLi);
  boton.addEventListener("click", createGanador);
- btnSortear.addEventListener("click", createNombre);
+ btnSortear.addEventListener("click", (createNombre));
 
  console.log(contador);
