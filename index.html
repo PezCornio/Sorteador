@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="" href="img/loteria.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
@@ -11,6 +12,7 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -19,16 +21,30 @@
 </head>
 <body>
     <header>
-        <h1 class="logo"><img class="logo-desktop" src="img/loteria.png" alt=""></h1>
+        <h1 class="logo"><img class="logo_header" src="img/loteria.png" alt=""></h1>
         <h1 class="titulo">SORTEADOR del PEZ</h1>
-        <h1 class="logoMobile"><img  class="logo-mobile" src="img/loteria.png" alt=""></h1>
+        
         <nav>
-            <ul>
-                <li class="nav-link"><a href="">Info</a></li>
-                <li class="nav-link"><a href="">Contacto</a></li>
+            <ul class="nav_ul">
+                <li class="logo_mobile"><img class="logo_header_mobile" src="img/loteria.png" alt=""></li>
+                <li class="nav-link"><button class="nav_btn" data-btn-info>Info</button></li>
+                <li class="nav-link"><button class="nav_btn" data-btn-contacto>Contacto</button></li>
+                <li class="logo_mobile"><img class="logo_header_mobile" src="img/loteria.png" alt=""></li>
             </ul>
         </nav>
-        
+        <div class="modal" data-modal-info>
+            <div class="modal-content">
+                <span class="close" data-span-info>&times;</span>
+                <h3 class="titulo_info">Bienvenidos al Sorteador del PezCornio!</h3>
+                <p class="parrafo_info">Las instrucciones para realizar un sorteo son bien simples</p>
+                <p class="parrafo_info">Sólo deberas ingresar el nombre de quien organiza el sorteo. Puede ser tu nombre personal, tu marca o lo que desees. Tené en cuenta que este paso es obligatorio. Los campos de Premio y Bases y condiciones son optativos.</p>
+                <p class="parrafo_info">Luego, podras empezar a cargar el nombre de los participantes. Una vez que termines, hace click en sortear y conoceras al ganador.</p>
+                <p class="parrafo_info">Gracias por elegirnos...Y Mucha Suerte!!</p>
+                <div class="logo_modal">
+                    <img src="img/Polish_20230122_211659946_adobe_express.png" alt="Logo PezCornio" class="logo_pezcornio">
+                </div>
+            </div>
+        </div>
     </header>
 
     
@@ -103,6 +119,8 @@
     </section>
 
     <footer>
+        <p class="leyenda_footer">Sitio desarrollado por:</p>
+        <img src="img/Polish_20230122_211659946_adobe_express.png" alt="Logo PezCornio" class="logo_footer">
 
     </footer>
         

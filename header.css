@@ -15,7 +15,7 @@ margin-bottom: 13px;
 
 
 }
-img {
+.logo_header {
     
     display: inline;
     width: 50px;
@@ -53,25 +53,106 @@ nav {
 
 }
 
-.nav-link > a {
-    text-decoration: none;
-    color: blanchedalmond;
-    float: right;
+.nav_btn {
+    background-color: #151621;
     font-family: 'Ubuntu';
+    color: white;
+    font-size: 1.1rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.nav_btn:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+    color: #FF9FFF;
+}
+
+
+
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 20%; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: #FF9AFF(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+ 
+.modal-content {
+    background-color: #f8d8f8;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #621d75;
+    width: 80%;
+    height: 350px;
+    font-family: 'Ubuntu';
+    border-radius: 1%;
+  }
+  
+  
+  .close {
+    color: #621d75;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .titulo_info {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 7px;
+    text-align: center;
+    color: #621d75;
+
+  }
+
+  .parrafo_info {
     font-size: 1.2rem;
-
+    color: #621d75;
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+  }
+.logo_modal {
+    display: flex;
+    justify-content: center;
 }
+  .logo_pezcornio {
+    height: 150px;
+    width: 150px;
+    
+  }
 
-.nav-link > a:hover {
-    color: #FF9AFF;
-    scale: 1.2;
-}
-
-.logoMobile {
-   
+  .logo_mobile {
     display: none;
+  }
 
-}
+  .logo_header_mobile{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    
+    float: left;
+    filter: hue-rotate(240deg);
+  }
+
+
 
 @media only screen and (max-width: 380px) {
 
@@ -86,22 +167,53 @@ nav {
     nav {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0;
         
     }
 
-    .logo {
-        scale: 0.7;
+    .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .logoMobile {
-        display: inline;
-        scale: 0.7;
-        flex-wrap: nowrap;
-    }
+    
+   .logo_header {
+    display: none;
+   }
+
+   .logo_mobile {
+    display: inline;
+   }
+
+   .logo_header_mobile {
+    display: inline;
+    margin: 10px;
+    scale: 0.6;
+   }
+
 
     .titulo {
         text-align: center;
         font-size: 1.4rem;
         margin: 0;
+    }
+
+    img {
+        margin: 0;
+    }
+
+    .nav_ul {
+        justify-content: center;
+    }
+
+    .modal {
+        padding-top: 10%;
+    }
+    .modal-content {
+        height: auto;
     }
 }

@@ -98,6 +98,30 @@ const contador = `<p class="parrafoCantidad">Cantidad de participantes: <span id
 document.getElementById("contador").innerHTML = contador;
 
 
+//Modal
+
+
+    
+const modalInfo = document.querySelector("[data-modal-info]");
+const btnModalInfo = document.querySelector("[data-btn-info]");
+const spanInfo = document.getElementsByClassName("close")[0];
+btnModalInfo.onclick = function() { 
+     modalInfo.style.display = "block";
+     console.log(modalInfo);
+}
+
+spanInfo.onclick = function() {
+    modalInfo.style.display = "none";
+  }
+
+window.onclick = function(event) {
+    if (event.target == modalInfo) {
+      modalInfo.style.display = "none";
+    }
+}
+
+
+
 //eventos
  btn.addEventListener("click", createLi);
  boton.addEventListener("click", createGanador);
