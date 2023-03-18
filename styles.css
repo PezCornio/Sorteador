@@ -123,6 +123,10 @@ body {
 
 .orgaInput:active {
     box-shadow: 2px 2px 15px #621d75 inset;
+    
+   }
+
+   .orgaInput:focus {
     border-color: #FF9AFF;
    }
 
@@ -165,9 +169,11 @@ body {
 
 #ingreso:active {
     box-shadow: 2px 2px 15px #621d75 inset;
-    color: #FF9AFF;
+    
    }
-
+#ingreso:focus {
+    border-color: #FF9AFF;
+}
 
 
 #agregar {
@@ -450,7 +456,7 @@ footer {
     }
 
     .contenedorWinner {
-        width: auto;
+        width: 87%;
         margin: 5px 9px 10px 9px;
     
     }
