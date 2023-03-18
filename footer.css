@@ -1,0 +1,30 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #621d75;
+    height: 110px;
+}
+
+.leyenda_footer {
+    font-weight: bold;
+    color: #FF9AFF;
+    text-align: center;
+}
+
+.logo_footer {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    
+}
+
+@media only screen and (max-width: 380px) {
+
+    footer {
+        justify-content: center;
+        height: 100px;
+        
+    }
+}
