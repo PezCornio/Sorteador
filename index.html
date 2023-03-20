@@ -45,6 +45,22 @@
                 </div>
             </div>
         </div>
+        <div class="modal_contacto" data-modal-contacto>
+            <div class="modal_contacto_content">
+                <span class="close_contacto" data-span-contacto>&times;</span>
+                <h4 class="titulo_contacto">Si encontras un error, un fallo o algún problema con nuestro sitio, o tenes alguna idea o propuesta para mejorarlo, por favor comunicate con nosotros</h4>
+                <form action="" id="nombre_contacto"></form>
+                <label for="nombre_contacto" class="label_nombre_contacto">Ingresa tu nombre:</label>
+                <input type="text" name="nombre_contacto" class="nombre_contacto">
+
+                <form action="" id="email_contacto"></form>
+                <label for="email_contacto">Ingresa tu correo electrónico:</label>
+                <input type="email" name="email_contacto" class="email_contacto">
+
+                <img src="img/Polish_20230122_211659946_adobe_express.png" alt="Logo PezCornio" class="logo_pezcornio">
+
+            </div>
+        </div>
     </header>
 
     
@@ -58,7 +74,7 @@
             
             <form action="" id="organizador" ></form>
             <label for="organizador" class="orgaLabel">Organizador: <span class="asterisco">*</span></label>
-            <input type="text" name="organizador" id="nombreOrganizador" placeholder="Nombre, Marca, etc..." class="orgaInput" data-organizador>
+            <input type="text" name="organizador" id="nombreOrganizador" placeholder="Nombre, Marca, etc..." class="orgaInput" data-organizador required>
     
             <form action="" id="premio"></form>
             <label for="premio" class="orgaLabel">Premio:</label>

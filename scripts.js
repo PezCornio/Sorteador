@@ -10,6 +10,10 @@ let conteo = [];
     evento.preventDefault();
     const inputDatos = document.querySelector("[data-organizador");
     const valueDatos = inputDatos.value;
+    if (valueDatos == "") {
+      alert("El nombre no puede estar vacío.")
+      return false}
+      else {
     inputDatos.value = "";
     const anuncio = document.querySelector("[data-caja-ganador]");
     const ganador = document.createElement("div");
@@ -21,7 +25,7 @@ let conteo = [];
 ganador.innerHTML = contenidoDatos;
 anuncio.appendChild(ganador);
 
-
+};
 
  }
 // crea participante en la lista
@@ -30,6 +34,11 @@ const createLi = (evento) => {
     evento.preventDefault();
     const input = document.querySelector("[data-input]");
     const value = input.value;
+    if (value =="") {
+      alert("Por favor, ingresa un nombre válido.")
+      return false
+    } 
+    else {
     const list = document.querySelector("[data-lista]");
     const participante = document.createElement("li");
     participante.classList.add("nuevoParticpante");
@@ -44,18 +53,8 @@ const createLi = (evento) => {
     //contador de participantes
     const contador = conteo.push(value);
 
-    
-   
-    /*const nroParticipantes = conteo.length;
-    const contenidoContador = `<div><P class="cantidad" >Cantidad de participantes:<span class="contador">${nroParticipantes}</span> </P></div>`;
-    console.log(contenidoContador);
 
-    function crearContador() {
-        const cajaContador = querySelector("[data-conteo]");
-        const parraContador = document.createElement("div");
-        parraContador.innerHTML = contenidoContador;
-        cajaContador.appendChild(parraContador);
-    }*/
+  };
 };
 
 //crea nombre del ganador
@@ -98,16 +97,14 @@ const contador = `<p class="parrafoCantidad">Cantidad de participantes: <span id
 document.getElementById("contador").innerHTML = contador;
 
 
-//Modal
-
-
+//Modal Info
     
 const modalInfo = document.querySelector("[data-modal-info]");
 const btnModalInfo = document.querySelector("[data-btn-info]");
 const spanInfo = document.getElementsByClassName("close")[0];
 btnModalInfo.onclick = function() { 
      modalInfo.style.display = "block";
-     console.log(modalInfo);
+     
 }
 
 spanInfo.onclick = function() {
@@ -120,6 +117,25 @@ window.onclick = function(event) {
     }
 }
 
+//Modal Contacto
+
+const modalContacto = document.querySelector("[data-modal-contacto]");
+const btnModalContacto = document.querySelector("[data-btn-contacto]");
+const spanContacto = document.getElementsByClassName("close_contacto")[0];
+btnModalContacto.onclick = function() { 
+     modalContacto.style.display = "block";
+     
+}
+
+spanContacto.onclick = function() {
+    modalContacto.style.display = "none";
+  }
+
+window.onclick = function(event) {
+    if (event.target == modalContacto) {
+      modalContacto.style.display = "none";
+    }
+}
 
 
 //eventos
