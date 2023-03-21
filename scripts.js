@@ -14,7 +14,7 @@ let conteo = [];
       alert("El nombre no puede estar vacío.")
       return false}
       else {
-    inputDatos.value = "";
+    inputDatos.disabled= true;
     const anuncio = document.querySelector("[data-caja-ganador]");
     const ganador = document.createElement("div");
     ganador.classList.add("creado");
@@ -30,10 +30,18 @@ anuncio.appendChild(ganador);
  }
 // crea participante en la lista
 const createLi = (evento) => {
+
     
     evento.preventDefault();
+    
     const input = document.querySelector("[data-input]");
     const value = input.value;
+    const inputDatos = document.querySelector("[data-organizador");
+    const valueDatos = inputDatos.value;
+    if (valueDatos == "") {
+      alert("Para ingresar un participante, primero debes indicar el nombre del organizador.")
+      return false}
+      else {
     if (value =="") {
       alert("Por favor, ingresa un nombre válido.")
       return false
@@ -53,13 +61,13 @@ const createLi = (evento) => {
     //contador de participantes
     const contador = conteo.push(value);
 
-
+    };
   };
 };
 
 //crea nombre del ganador
 const createNombre = (evento) => {
-evento.preventDefault();
+//evento.preventDefault();
 const rand = Math.floor(Math.random()*conteo.length);
 const nombre = conteo[rand];
 const cajaGanador = document.querySelector("[data-nombre]");
@@ -141,6 +149,6 @@ window.onclick = function(event) {
 //eventos
  btn.addEventListener("click", createLi);
  boton.addEventListener("click", createGanador);
- btnSortear.addEventListener("click", (createNombre));
+ btnSortear.addEventListener("click", function() {setTimeout(createNombre, 3000);});
 
  console.log(contador);

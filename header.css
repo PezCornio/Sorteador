@@ -130,6 +130,7 @@ nav {
     text-align: center;
   }
 
+  /* Modal Contacto */
   .modal_contacto {
     display: none; 
     position: fixed; 
