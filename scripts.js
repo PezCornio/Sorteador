@@ -22,10 +22,13 @@ let conteo = [];
     <h1 class="animate__animated animate__backInLeft" >El ganador/a del sorteo de<span class="organizador"> ${valueDatos} </span>es...</h1>
     </span>
 `;
+
 ganador.innerHTML = contenidoDatos;
 anuncio.appendChild(ganador);
 
+
 };
+
 
  }
 // crea participante en la lista
@@ -47,7 +50,13 @@ const createLi = (evento) => {
       return false
     } 
     else {
-    const list = document.querySelector("[data-lista]");
+      if (conteo.some(conteo => conteo == value)) {
+        alert("El participante ya fue ingresado.")
+        
+        return false
+      }
+      else {
+        const list = document.querySelector("[data-lista]");
     const participante = document.createElement("li");
     participante.classList.add("nuevoParticpante");
       input.value = "";
@@ -60,6 +69,8 @@ const createLi = (evento) => {
 
     //contador de participantes
     const contador = conteo.push(value);
+      }
+    
 
     };
   };
@@ -77,6 +88,12 @@ const contenidoGanador = `<span><h1 class="winner animate__animated animate__zoo
 nombreGanador.innerHTML = contenidoGanador;
 cajaGanador.appendChild(nombreGanador);
 
+const bloqueoSortear = (evento) => {
+  if (nombre != ""){
+    btnSortear.disable = true;
+  };
+};
+
 
 console.log(conteo.length);
 
@@ -85,19 +102,7 @@ console.log(conteo.length);
 
 
 
- /*
-const crearContador = function () {
-    
-const parraContador = document.createElement("div");
-parraContador.classList.add("cajaContenido");
-const nroParticipantes = conteo.length;
-const contenidoContador = `<div><P class="cantidad" >Cantidad de participantes:<span class="contador">${nroParticipantes}</span> </P></div>`;
-parraContador.innerHTML = contenidoContador;
-cajaContador.appendChild(parraContador);
-console.log(contenidoContador);
-console.log(nroParticipantes);
-};
-*/
+
 
 const nroParticipantes = conteo.length;
 const contador = `<p class="parrafoCantidad">Cantidad de participantes: <span id="total"> ${conteo.length}
@@ -145,10 +150,26 @@ window.onclick = function(event) {
     }
 }
 
+// Loader
+
+const loader = document.querySelector("[data-loader]");
+
+
+btnSortear.onclick = function loaderFun() {
+  loader.style.display = "flex";
+  
+};
+
+
+
+
+
+
+
 
 //eventos
  btn.addEventListener("click", createLi);
  boton.addEventListener("click", createGanador);
  btnSortear.addEventListener("click", function() {setTimeout(createNombre, 3000);});
 
- console.log(contador);
+ console.log(ocultarLoader);
